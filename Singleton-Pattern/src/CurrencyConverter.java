@@ -9,10 +9,12 @@ public class CurrencyConverter {
     private CurrencyConverter() {}
 
     public static synchronized CurrencyConverter getInstance() {
-        if (instance == null ){
-            instance = new CurrencyConverter();
+        synchronized (CurrencyConverter.class) {
+            if (instance == null ){
+                instance = new CurrencyConverter();
+            }
+            return instance;
         }
-        return instance;
     }
 
     public double tlToUsd(double tl) {
