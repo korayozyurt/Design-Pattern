@@ -5,7 +5,7 @@
 
 public class Main {
     public static void main(String[] args) {
-        Logistic logistic = LogisticFactory.getLogisticFactory("Airline");
+        Logistic logistic = LogisticFactory.getLogisticFactory(Airline.class.getName());
         System.out.println(logistic.calculatePrice(4));
     }
 }

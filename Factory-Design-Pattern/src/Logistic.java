@@ -4,7 +4,6 @@
  */
 
 abstract class Logistic {
-
     protected double rate;
 
     abstract void setRate();
@@ -12,5 +11,4 @@ abstract class Logistic {
     public double calculatePrice(double kilogram) {
         return kilogram * rate;
     }
-
 }
